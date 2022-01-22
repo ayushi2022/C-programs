@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+void removeDupWord(string str)
+{
+	istringstream ss(str);
+	unordered_set<string> hsh;
+	do
+	{
+       string word;
+	   ss>>word;
+	   while(hsh.find(word) == hsh.end()){
+		   cout<< word<< " ";
+		   hsh.insert(word);
+	    }
+	} while (ss);
+}
+int main()
+{
+	string str = "geeks for geeks a computer science portal for geeks";
+	removeDupWord(str);
+	return 0;
+		   
+}
