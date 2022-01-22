@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,min=0,i;
+	cout<<"enter num  ";
+	cin>>n;
+	int arr[n];
+	cout<<"enter array  ";
+	for(i=0;i<n;i++)
+	{
+		cin>>arr[i];
+	}
+	sort(arr,arr+n);
+	for(i=0;i<n;i++)
+	{
+		if(arr[i]<0)
+		{
+			continue;
+		}
+		else if(arr[i]==min)
+		{
+			min+=1;
+		}
+		else{
+			cout<<"smallest missing number"<<min;
+			return 0;
+		}
+	}
+	return 0;
+}
